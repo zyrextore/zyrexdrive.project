@@ -1,0 +1,10 @@
+{
+  "name":"ZYREX",
+  "short_name":"ZYREX",
+  "start_url":"/",
+  "display":"standalone",
+  "background_color":"#08090b",
+  "theme_color":"#08090b",
+  "description":"ZYREX digital studio and client workspace",
+  "icons":[]
+}

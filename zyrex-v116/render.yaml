@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: zyrex
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ADMIN_USERNAME
+        value: admin
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false
+      - key: DATA_DIR
+        value: /opt/render/project/src/data
+      - key: BQ_API_URL
+        value: https://api.buatqris.site
+      - key: BQ_ACCOUNT_ID
+        sync: false
+      - key: BQ_SECRET_TOKEN
+        sync: false
+      - key: BQ_WEBHOOK_SECRET
+        sync: false
+      - key: BQ_QRIS_METHOD
+        value: qris_two
+      - key: BQ_FEE_BY
+        value: user
+      - key: BQ_MODE
+        value: sandbox
